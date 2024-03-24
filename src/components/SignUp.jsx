@@ -25,6 +25,7 @@ setloading(true)
 setloading(false)
     if (!response.ok) {
       alert("Error Occured !");
+      navigate("/signup")
       return;
     }
 
