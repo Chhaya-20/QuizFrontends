@@ -24,6 +24,7 @@ function Login() {
   
         if (!response.ok) {
           alert("Wrong Credentials")
+           navigate("/signup")
           return;
         }
   
