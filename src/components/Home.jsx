@@ -40,6 +40,10 @@ function Home() {
         }
     }
 
+    const contribute = ()=>{
+        navigate('/addtopic')
+    }
+
     useEffect(() => {
         if (!localStorage.getItem('token')) {
             navigate('/login');
@@ -94,11 +98,11 @@ function Home() {
                     </div>
                 </div>
                 <div style={{"position":"absolute" , "bottom":0 , }}>
-                <a  style={{"color":"black" , "fontSize":"20px" , "textDecoration":"underline"}} 
-                className='fw-bold' href="/addtopic"
+                <button onClick={contribute} style={{"color":"black" , "fontSize":"20px" , "textDecoration":"underline"}} 
+                className='fw-bold'
                 onMouseEnter={(e) => { e.target.style.color = "blue"; }} // Change color on hover
   onMouseLeave={(e) => { e.target.style.color = "black"; }} // Restore original color
-                >Contribute to a Topic or ques</a>
+                >Contribute to a Topic or ques</button>
                 </div>
                
             </div>
