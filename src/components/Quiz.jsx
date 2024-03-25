@@ -103,6 +103,7 @@ if (questions[i].result.trim() === selectedOptions[questions[i]._id].trim()) {
 
       
           <h2 className='text-center'>QUESTIONS OF QUIZ</h2>
+          <p>Each question carry 10 marks</p>
           <hr/>
          <div className="quiz">
          {questions.map((question, index) => (
