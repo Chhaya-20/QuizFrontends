@@ -21,7 +21,7 @@ function Login() {
           },
           body: JSON.stringify({ email, password }),
         });
-  
+  setloading(false)
         if (!response.ok) {
           alert("Wrong Credentials")
            navigate("/login")
@@ -29,7 +29,7 @@ function Login() {
         }
   
         const data = await response.json();
-      setloading(false)
+     
         localStorage.setItem('token',data.token)
         navigate('/home');
         
